@@ -94,9 +94,10 @@
 </head>
 <body>
   <!-- Top banner image -->
-  <a href="https://cabezaskateboards.square.site" style="top: 0; left: 0; width: 100%; z-index: 2000; position: absolute; display: block;">
-    <img src="./clickanywheretoprocde.png" style="width: 100%; max-height: 300px; object-fit: cover;" />
-  </a>
+ <a href="https://cabezaskateboards.square.site" 
+   style="position: absolute; top: 0; left: 0; width: 100%; z-index: 2000;">
+  <img src="./clickanywheretoprocde.png" style="width: 100%; max-height: 300px; object-fit: cover;" />
+</a>
 
   <!-- Logo link -->
   <a href="https://cabezaskateboards.square.site" style="top: 320px; left: 0; z-index: 999;">
