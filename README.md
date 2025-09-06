@@ -9,7 +9,7 @@
     body {
       background-color: rgb(255, 255, 255);
       position: relative;
-      height: 5000px; /* increased to allow more spacing */
+      height: 6000px; /* extended for larger images */
       overflow-x: hidden;
       margin: 0;
     }
@@ -22,25 +22,25 @@
 
     /* === Image Core: Mobile default === */
     a.img-0838 { top: 200px; left: 31px; }
-    a.img-0839 { top: 600px; left: 120px; }
-    a.img-0840 { top: 1000px; left: 50px; }
-    a.img-0841 { top: 1400px; left: 200px; }
-    a.img-0842 { top: 1800px; left: 90px; }
-    a.img-0843 { top: 2200px; left: 180px; }
-    a.img-0844 { top: 2600px; left: 50px; }
-    a.img-0845 { top: 3000px; left: 250px; }
-    a.img-0846 { top: 3400px; left: 100px; }
-    a.img-0847 { top: 3800px; left: 200px; }
-    a.img-0849 { top: 4200px; left: 60px; }
-    a.img-0850 { top: 4600px; left: 180px; }
-    a.img-0851 { top: 500px; left: 260px; }
-    a.img-0853 { top: 900px; left: 240px; }
-    a.img-0854 { top: 1300px; left: 30px; }
-    a.img-0855 { top: 1700px; left: 270px; }
-    a.img-0856 { top: 2100px; left: 70px; }
-    a.img-0857 { top: 2500px; left: 250px; }
-    a.img-0876 { top: 2900px; left: 40px; }
-    a.img-0877 { top: 3300px; left: 220px; }
+    a.img-0839 { top: 700px; left: 120px; }
+    a.img-0840 { top: 1300px; left: 50px; }
+    a.img-0841 { top: 1900px; left: 200px; }
+    a.img-0842 { top: 2500px; left: 90px; }
+    a.img-0843 { top: 3100px; left: 180px; }
+    a.img-0844 { top: 3700px; left: 50px; }
+    a.img-0845 { top: 4300px; left: 250px; }
+    a.img-0846 { top: 4900px; left: 100px; }
+    a.img-0847 { top: 5500px; left: 200px; }
+    a.img-0849 { top: 6100px; left: 60px; }
+    a.img-0850 { top: 6700px; left: 180px; }
+    a.img-0851 { top: 900px; left: 260px; }
+    a.img-0853 { top: 1500px; left: 240px; }
+    a.img-0854 { top: 2100px; left: 30px; }
+    a.img-0855 { top: 2700px; left: 270px; }
+    a.img-0856 { top: 3300px; left: 70px; }
+    a.img-0857 { top: 3900px; left: 250px; }
+    a.img-0876 { top: 4500px; left: 40px; }
+    a.img-0877 { top: 5100px; left: 220px; }
 
     /* === Desktop override === */
     @media (min-width: 768px) {
@@ -66,17 +66,35 @@
       a.img-0877 { left: 50%; }
     }
 
-    /* General image sizing */
+    /* General image sizing with variation */
     .gallery img {
-      width: 250px; /* base size */
-      max-width: 350px;
       box-shadow: 0px 4px 12px black;
     }
+    .img-0838 img { width: 300px; }
+    .img-0839 img { width: 350px; }
+    .img-0840 img { width: 400px; }
+    .img-0841 img { width: 500px; }
+    .img-0842 img { width: 320px; }
+    .img-0843 img { width: 460px; }
+    .img-0844 img { width: 380px; }
+    .img-0845 img { width: 420px; }
+    .img-0846 img { width: 340px; }
+    .img-0847 img { width: 480px; }
+    .img-0849 img { width: 360px; }
+    .img-0850 img { width: 330px; }
+    .img-0851 img { width: 500px; }
+    .img-0853 img { width: 310px; }
+    .img-0854 img { width: 390px; }
+    .img-0855 img { width: 470px; }
+    .img-0856 img { width: 340px; }
+    .img-0857 img { width: 410px; }
+    .img-0876 img { width: 300px; }
+    .img-0877 img { width: 450px; }
   </style>
 </head>
 <body>
   <!-- Top banner image -->
-  <a href="https://cabezaskateboards.square.site" style="top: 0; left: 0; z-index: 1000; position: relative; display: block;">
+  <a href="https://cabezaskateboards.square.site" style="top: 0; left: 0; width: 100%; z-index: 1000; position: relative; display: block;">
     <img src="./clickanywheretoprocde.png" style="width: 100%; max-height: 300px; object-fit: cover;" />
   </a>
 
