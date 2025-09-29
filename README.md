@@ -114,7 +114,7 @@
 
   <!-- === Image Core === -->
   <div class="gallery">
-    <a href="https://cabezaskateboards.square.site" class="img-0838"><img src="./olesky_alex_assignment_5-369.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site" class="img-0838"><img src="./clickanywheretoprocde.png" /></a>
     <a href="https://cabezaskateboards.square.site" class="img-0839"><img src="./olesky_alex_assignment_5-373.jpg" /></a>
     <a href="https://cabezaskateboards.square.site" class="img-0840"><img src="./olesky_alex_assignment_5-374.jpg" /></a>
     <a href="https://cabezaskateboards.square.site" class="img-0841"><img src="./olesky_alex_assignment_5-376-2.jpg" /></a>
