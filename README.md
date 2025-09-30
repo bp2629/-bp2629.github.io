@@ -1,40 +1,95 @@
-<style>
-  body {
-    background-color: #fff;
-    margin: 0;
-    overflow-x: hidden;
-    position: relative;
-  }
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  /* Banner always locked to top */
-  .banner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2000;
-  }
+    body {
+      background-color: #fff;
+      margin: 0;
+      overflow-x: hidden;
+      position: relative;
+    }
 
-  .banner img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    display: block;
-  }
+    /* === Banner === */
+    .banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2000;
+    }
 
-  .logo {
-    top: 320px;
-    left: 0;
-    z-index: 999;
-    position: absolute;
-  }
+    .banner img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      display: block;
+    }
 
-  .gallery {
-    position: relative;
-    width: 100%;
-  }
-</style>
+    /* === Logo === */
+    .logo {
+      position: absolute;
+      top: 320px;
+      left: 0;
+      z-index: 1500;
+    }
 
+    .logo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* === Instagram === */
+    .insta-text {
+      position: absolute;
+      top: 350px;
+      right: 30px;
+      z-index: 1600;
+    }
+
+    .insta-icon {
+      position: absolute;
+      top: 375px;
+      right: 30px;
+      z-index: 1600;
+    }
+
+    .insta-icon img {
+      width: 75px;
+      height: auto;
+      display: block;
+    }
+
+    /* === Gallery === */
+    .gallery {
+      position: relative;
+      width: 100%;
+    }
+
+    .gallery a img {
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+      display: block;
+    }
+
+    /* Sizes assigned dynamically */
+    .small img {
+      width: 140px;
+    }
+
+    .medium img {
+      width: 220px;
+    }
+
+    .large img {
+      width: 380px;
+    }
+  </style>
+</head>
 <body>
   <!-- Top banner -->
   <a href="https://cabezaskateboards.square.site" class="banner">
@@ -43,12 +98,40 @@
 
   <!-- Logo -->
   <a href="https://cabezaskateboards.square.site" class="logo">
-    <img src="./delbelpcss.png" style="width:100%;" />
+    <img src="./delbelpcss.png" />
   </a>
 
-  <!-- Gallery -->
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/cab3.za/" class="insta-text">Click Here!</a>
+  <a href="https://www.instagram.com/cab3.za/" class="insta-icon">
+    <img src="./zoolander0.1488068903.jpg.webp" />
+  </a>
+
+  <!-- === Gallery === -->
   <div class="gallery">
-    <!-- images here -->
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-374.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-376-2.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-376.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-405.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-407.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-646.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-647.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-648.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-649.jpg" /></a>
+
+    <!-- moved down into the middle -->
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-372.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-373.jpg" /></a>
+
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-650.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-651.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-652.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-653.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-654.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-655.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-656.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-657.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-658.jpg" /></a>
   </div>
 
   <script>
@@ -56,13 +139,12 @@
     const gallery = document.querySelector(".gallery");
     const images = gallery.querySelectorAll("a");
 
-    // Measure banner + logo area so we start below it
+    // Measure banner + logo
     const bannerHeight = document.querySelector(".banner").offsetHeight;
     const logo = document.querySelector(".logo img");
-    const logoBottom = 320 + logo.offsetHeight; // 320px from CSS + logo height
+    const logoBottom = 320 + logo.offsetHeight; // 320px offset in CSS
 
-    const galleryStartY = Math.max(bannerHeight, logoBottom) + 50; 
-    // +50px padding
+    const galleryStartY = Math.max(bannerHeight, logoBottom) + 50;
 
     let topPos = galleryStartY;
     const verticalSpacing = 300;
@@ -89,3 +171,4 @@
     document.body.style.height = (topPos + 500) + "px";
   </script>
 </body>
+</html>
