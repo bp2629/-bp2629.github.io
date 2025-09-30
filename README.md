@@ -33,7 +33,6 @@
     /* === Logo === */
     .logo {
       position: absolute;
-      top: 320px;
       left: 0;
       z-index: 1500;
     }
@@ -47,14 +46,12 @@
     /* === Instagram === */
     .insta-text {
       position: absolute;
-      top: 350px;
       right: 30px;
       z-index: 1600;
     }
 
     .insta-icon {
       position: absolute;
-      top: 375px;
       right: 30px;
       z-index: 1600;
     }
@@ -76,7 +73,6 @@
       display: block;
     }
 
-    /* Sizes assigned dynamically */
     .small img {
       width: 140px;
     }
@@ -109,8 +105,7 @@
 
   <!-- === Gallery === -->
   <div class="gallery">
-    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-372.jpg" /></a>
-    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-373.jpg" /></a>
+    <!-- notice 372 + 373 moved further down -->
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-374.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-376-2.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-376.jpg" /></a>
@@ -118,6 +113,10 @@
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-407.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-646.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-647.jpg" /></a>
+    <!-- 372 + 373 placed here in the middle -->
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-372.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-373.jpg" /></a>
+    <!-- continue with the rest -->
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-648.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-649.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-650.jpg" /></a>
@@ -133,18 +132,25 @@
 
   <script>
     const sizes = ["small", "medium", "large"];
+    const banner = document.querySelector(".banner img");
+    const logo = document.querySelector(".logo");
+    const instaText = document.querySelector(".insta-text");
+    const instaIcon = document.querySelector(".insta-icon");
+
+    // Place logo just under banner
+    const bannerHeight = banner.offsetHeight;
+    logo.style.top = bannerHeight + 10 + "px"; // small gap
+    instaText.style.top = bannerHeight + 40 + "px";
+    instaIcon.style.top = bannerHeight + 65 + "px";
+
     const gallery = document.querySelector(".gallery");
     const images = gallery.querySelectorAll("a");
 
-    // Measure banner + logo
-    const bannerHeight = document.querySelector(".banner").offsetHeight;
-    const logo = document.querySelector(".logo img");
-    const logoBottom = 320 + logo.offsetHeight; // 320px offset in CSS
+    // Measure bottom of logo to start gallery
+    const logoBottom = bannerHeight + logo.offsetHeight + 20;
 
-    const galleryStartY = Math.max(bannerHeight, logoBottom) + 50;
-
-    let topPos = galleryStartY;
-    const verticalSpacing = 300;
+    let topPos = logoBottom + 50;
+    const verticalSpacing = 320;
 
     images.forEach(a => {
       const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
