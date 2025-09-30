@@ -158,7 +158,7 @@
       let imgWidth = 200;
       if (randomSize === "small") imgWidth = 140;
       if (randomSize === "medium") imgWidth = 220;
-      if (randomSize === "large") imgWidth = 380;
+      if (randomSize === "large") imgWidth = 270;
 
       const maxX = window.innerWidth - imgWidth - 20;
       const randomX = Math.floor(Math.random() * maxX);
