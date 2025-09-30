@@ -109,6 +109,8 @@
 
   <!-- === Gallery === -->
   <div class="gallery">
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-372.jpg" /></a>
+    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-373.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-374.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-376-2.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-376.jpg" /></a>
@@ -118,11 +120,6 @@
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-647.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-648.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-649.jpg" /></a>
-
-    <!-- moved down into the middle -->
-    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-372.jpg" /></a>
-    <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-373.jpg" /></a>
-
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-650.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-651.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-652.jpg" /></a>
