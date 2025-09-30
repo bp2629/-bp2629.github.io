@@ -105,7 +105,6 @@
 
   <!-- === Gallery === -->
   <div class="gallery">
-    <!-- notice 372 + 373 moved further down -->
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-374.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-376-2.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-376.jpg" /></a>
@@ -113,10 +112,10 @@
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-407.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-646.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-647.jpg" /></a>
-    <!-- 372 + 373 placed here in the middle -->
+    <!-- 372 + 373 in the middle -->
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-372.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-373.jpg" /></a>
-    <!-- continue with the rest -->
+    <!-- continue -->
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-648.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-649.jpg" /></a>
     <a href="https://cabezaskateboards.square.site"><img src="./olesky_alex_assignment_5-650.jpg" /></a>
@@ -146,10 +145,10 @@
     const gallery = document.querySelector(".gallery");
     const images = gallery.querySelectorAll("a");
 
-    // Measure bottom of logo to start gallery
-    const logoBottom = bannerHeight + logo.offsetHeight + 20;
+    // Now gallery starts at the same height as the logo
+    const galleryStartY = bannerHeight + 10; 
 
-    let topPos = logoBottom + 50;
+    let topPos = galleryStartY;
     const verticalSpacing = 320;
 
     images.forEach(a => {
