@@ -1,23 +1,27 @@
 <script>
-window.onload = function() {
-  const sizes = ["small", "medium", "large"];
+function positionElements() {
   const banner = document.querySelector(".banner img");
   const logo = document.querySelector(".logo");
   const instaText = document.querySelector(".insta-text");
   const instaIcon = document.querySelector(".insta-icon");
-
-  // Place logo just under banner
-  const bannerHeight = banner.offsetHeight;
-  logo.style.top = bannerHeight + 10 + "px"; // small gap
-  instaText.style.top = bannerHeight + 40 + "px";
-  instaIcon.style.top = bannerHeight + 65 + "px";
-
   const gallery = document.querySelector(".gallery");
   const images = gallery.querySelectorAll("a");
 
-  // Now gallery starts at the same height as the logo
-  const galleryStartY = bannerHeight + 10; 
+  if (!banner.complete || banner.naturalHeight === 0) {
+    // If the banner isn't fully loaded yet, try again shortly
+    setTimeout(positionElements, 100);
+    return;
+  }
 
+  const bannerHeight = banner.offsetHeight;
+
+  // Position elements relative to banner height
+  logo.style.top = bannerHeight + 10 + "px";
+  instaText.style.top = bannerHeight + 40 + "px";
+  instaIcon.style.top = bannerHeight + 65 + "px";
+
+  const sizes = ["small", "medium", "large"];
+  const galleryStartY = bannerHeight + 10; 
   let topPos = galleryStartY;
   const verticalSpacing = 320;
 
@@ -41,5 +45,17 @@ window.onload = function() {
   });
 
   document.body.style.height = (topPos + 500) + "px";
-};
+}
+
+// Recalculate positions after everything loads
+window.addEventListener("load", positionElements);
+
+// Recalculate again if screen resizes or rotates (mobile fix)
+window.addEventListener("resize", () => {
+  // Clear previously added inline positions
+  document.querySelectorAll(".gallery a").forEach(a => {
+    a.removeAttribute("style");
+  });
+  positionElements();
+});
 </script>
