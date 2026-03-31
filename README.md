@@ -87,10 +87,6 @@
   </style>
 </head>
 <body>
-  <!-- Top banner -->
-  <a href="https://cabezaskateboards.square.site" class="banner">
-    <img src="./clickanywheretoprocde.png" />
-  </a>
 
   <!-- Logo -->
   <a href="https://cabezaskateboards.square.site" class="logo">
